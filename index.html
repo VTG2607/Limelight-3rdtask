@@ -32,11 +32,11 @@
         }
 
         header {
-            margin-top: 52px;
+            margin-top: 60px;
         }
 
         .head-img {
-            width: 200px;
+            width: 150px;
             height: auto;
             align-self: center;
         }
@@ -46,9 +46,9 @@
             height: auto;
             align-self: center;
         }
-        div > img {
-            width: 200px;
-            height: 160px;
+        .service-img {
+            width: auto;
+            height: auto;
             max-width: 150px;
             max-height: 250px;
 
@@ -133,14 +133,95 @@
             border: 0.2em solid gray;
         }
 
+        /* Modal backdrop customization */
+        .portfolio-modal .modal-dialog {
+            max-width: 900px;
+        }
+
+        .portfolio-modal .modal-content {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+        }
+
+
+        .portfolio-modal .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+            z-index: 1051;
+        }
+
+        .portfolio-modal .close-modal img {
+            width: 30px;
+            height: 30px;
+            filter: invert(50%);
+            transition: transform 0.2s ease, filter 0.2s ease;
+        }
+
+        .portfolio-modal .close-modal img:hover {
+            transform: scale(1.1);
+            filter: invert(20%);
+        }
+
+        /* Modal body text & layout */
+        .portfolio-modal .modal-body {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .portfolio-modal .modal-body h2 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-modal .modal-body .item-intro {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #6c757d;
+        }
+
+        .portfolio-modal .modal-body img {
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        .portfolio-modal .modal-body p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-modal .modal-body .list-inline {
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-modal .modal-body .list-inline li {
+            display: inline-block;
+            margin: 0 0.75rem;
+            font-weight: 500;
+        }
+
+        /* Button styling */
+        .portfolio-modal .modal-body .btn {
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1rem;
+        }
+
 
     </style>
 </head>
 <body id="page-top">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg bg-dark-subtle fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="img-fluid head-img" src="assets/img/navbar-logo.svg" alt="" /></a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="img-fluid head-img" src="assets/img/mywbsite-removebg.png" alt="" /></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
             <i class="fas fa-bars ml-1"></i>
             </button>
@@ -185,12 +266,12 @@
                     <i class="text-muted">Proficient in responsive web development</i>
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/img/python.png">
+                    <img class="service-img" src="assets/img/python.png">
                     <h4 class="skills">Python</h4>
                     <i class="text-muted">Python and python-specific frameworks(django, fastAPI)</i>
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/img/logo_dark.svg">
+                    <img class="service-img" src="assets/img/logo_dark.svg">
                     <h4 class="skills ">React</h4>
                     <i class="text-muted">Front End Development</i>
                 </div>
@@ -210,7 +291,7 @@
                     <div class="card">
                         <h3 class="card-header">Django web blog</h3>
                         <div class="card-body">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">   
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">   
                                 <img  class="card-img card-img-top img-fluid"  src="assets/img/portfolio/blog.jpg">                        
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -224,7 +305,7 @@
                     <div class="card">
                         <h3 class="card-header">Django rest library</h3>
                         <div class="card-body">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">   
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">   
                                 <img class="card-img card-img-top img-fluid"  src="assets/img/portfolio/api.jpg">                        
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -238,7 +319,7 @@
                     <div class="card">
                         <h3 class="card-header">React page</h3>
                         <div class="card-body">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">   
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">   
                                 <img  class="card-img card-img-top img-fluid"  src="assets/img/portfolio/react.png">                        
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -252,8 +333,8 @@
                     <div class="card">
                         <h3 class="card-header">Flexbox miniapp</h3>
                         <div class="card-body">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">   
-                                <img  class="card-img card-img-top img-fluid"  src="assets/img/portfolio/01-thumbnail.jpg">                        
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">   
+                                <img  class="card-img card-img-top img-fluid"  src="assets/img/portfolio/flex-box-seeklogo.png">                        
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
@@ -266,7 +347,7 @@
                     <div class="card">
                         <h3 class="card-header">Django todo app api</h3>
                         <div class="card-body">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">   
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">   
                                 <img  class="card-img card-img-top img-fluid"  src="assets/img/portfolio/01-thumbnail.jpg">                        
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -278,16 +359,15 @@
                 </div>
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="card">
-                        <h3 class="card-header">Django web app</h3>
+                        <h3 class="card-header">FastAPI Project</h3>
                         <div class="card-body">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">   
-                                <img  class="card-img card-img-top img-fluid"  src="assets/img/portfolio/01-thumbnail.jpg">                        
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">   
+                                <img  class="card-img card-img-top img-fluid"  src="assets/img/portfolio/logo-teal.png">                        
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
                             </a>
-                            <p class="card-text text-light-emphasis p-3 text-bg-info rounded">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Rerum animi sint voluptatibus quae quas! Saepe, officia ab.</p>
+                            <p class="card-text text-light-emphasis p-3 text-bg-info rounded">An API im making ewith FastAPI with CRUD operations, it allows you to create and modify Posts with a body and a title </p>
                         </div>
                     </div>
                 </div>
@@ -344,7 +424,14 @@
                             <h2 class="section-heading text-uppercase">Certifications</h2>
                             <h3 class="section-sub">My certifications and qualifications</h3>
                         </div>
-
+                        <div class="row text-center">
+                            <div class="col-lg-4 col-sm-6"><img class="img-fluid" src="assets/img/certifications/AZ900.png"></div>
+                            <div class="col-lg-4 col-sm-6"><img class="img-fluid" src="assets/img/certifications/ITS-Badges_HTML-and-CSS_1200px.png"></div>
+                            <div class="col-lg-4 col-sm-6"><img class="img-fluid" src="assets/img/certifications/DP900.png"></div>
+                            <div class="col-lg-4 col-sm-6"><img class="img-fluid" src="assets/img/certifications/ITS-Badges_JavaScript_1200px.png"></div>
+                            <div class="col-lg-4 col-sm-6"><img class="img-fluid" src="assets/img/certifications/ITS-Badges_Python_1200px.png"></div>
+                            <div class="col-lg-4 col-sm-6"><img class="img-fluid" src="assets/img/certifications/image.png"></div>
+                        </div>
                     </div>
         </section>
 <!-- Contact-->
@@ -384,8 +471,182 @@
                 </form>
             </div>
         </section>
+        <!-- Portfolio Modals-->
+        <!-- Modal 1-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Django web blog</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/01-full.jpg" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>Date: January 2024</li>
+                                        <li>Category: Web App</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
+<!-- Modal 2-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Django Rest Framework Library</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/02-full.jpg" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>Date: January 2025</li>
+                                        <li>Category: API </li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 3-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">React Site</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/03-full.jpg" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>Date: November 2024</li>
+                                        <li>Category: Responsive Web</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 4-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Flexbox mini gallery</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/04-full.jpg" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>Date: September 2023</li>
+                                        <li>Category: Responsive Web</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 5-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Djnago todo API</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/05-full.jpg" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>Date: January 2025</li>
+                                        <li>Category: API</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 6-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">FastAPI</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/06-full.jpg" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>Date: May 2024</li>
+                                        <li>Category: API</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     <!--Footer-->
         <footer class="footer py-4">
             <div class="container">
